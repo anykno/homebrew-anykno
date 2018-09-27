@@ -1,2 +1,2 @@
-# homebrew-anykno
+# homebrew-cust
 owned brew tap!!
