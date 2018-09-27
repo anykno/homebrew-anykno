@@ -100,12 +100,12 @@ __END__
 +  {
 +    rsa->sizeof_g_packet = buf_len;
 +    for (i = 0; i < gdbarch_num_regs(gdbarch); i++) {
-+      if (rsa->regs->pnum == -1)
++      if (rsa->regs[i].pnum == -1)
 +        continue;
-+      if (rsa->regs->offset >= rsa->sizeof_g_packet)
-+        rsa->regs->in_g_packet = 0;
++      if (rsa->regs[i].offset >= rsa->sizeof_g_packet)
++        rsa->regs[i].in_g_packet = 0;
 +      else
-+        rsa->regs->in_g_packet = 1;
++        rsa->regs[i].in_g_packet = 1;
 +    }
 +  }
  
